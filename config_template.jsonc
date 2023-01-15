@@ -1,0 +1,26 @@
+{
+    "port": 6000, // port for listening incoming hook
+    // default interval between each pull action, if payload is received between interval, pull will be executed after interval.
+    "default_interval": "10m", // d,h,m,s
+    //
+    "repo": {
+        // change "user/repo" to the username and repository name for each repo configuration
+        "user/repo": {
+            // required
+            //
+            // relative / absolute path to the local repository
+            "local_path": "",
+            //
+            // optional
+            //
+            // cli execution after pull action, only execute when branch is matched
+            "action": {
+                "command": "",
+                "successOnly": true // only run if pull is success
+            },
+            "branch": "", // name of the branch to listen, Default: master branch of repo
+            "interval": "", // override default interval. Default: default_interval
+            "pullWhenRemoveOnly": true // pull when the push only remove files. Default: true
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "port": 6000, // port for listening incoming hook
+    // default interval between each pull action, if payload is received between interval, pull will be executed after interval.
+    "default_interval": "1s", // d,h,m,s
+    //
+    "repo": {
+        "GWMCwing/Git-Auto-Pull": {
+            "local_path": "./",
+            "action": {
+                "command": "",
+                "successOnly": true // only run if pull is success
+            }
+        }
+    }
+}
